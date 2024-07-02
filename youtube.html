@@ -8,16 +8,22 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles/general.css">
-  <link rel="stylesheet" href="styles/video.css">
   <link rel="stylesheet" href="styles/header.css">
   <link rel="stylesheet" href="styles/sidebar.css">
+  <link rel="stylesheet" href="styles/filter.css">
+  <link rel="stylesheet" href="styles/video.css">
 </head>
 
 <body>
   <header class="header">
     <div class="left-section">
-      <img class="hamburger-menu" src="images/icons/hamburger-menu.svg">
-      <img class="youtube-logo" src="images/logos/youtube-logo.svg">
+      <div class="hamburger-menu-container">
+        <img class="hamburger-menu" src="images/icons/hamburger-menu.svg">
+      </div>
+      <div class="youtube-logo-container">
+        <img class="youtube-logo" src="images/logos/youtube-logo.svg">
+        <div class="youtube-logo-country">PK</div>
+      </div>
     </div>
     <div class="middle-section">
       <input class="search-bar" type="text" placeholder="Search" />
@@ -35,16 +41,16 @@
         <img class="upload-icon" src="images/icons/upload.svg" alt="">
         <div class="tooltip">Create</div>
       </div>
-      <div class="youtube-apps-icon-container">
+      <!-- <div class="youtube-apps-icon-container">
         <img class="youtube-apps-icon" src="images/icons/youtube-apps.svg" alt="">
         <div class="tooltip">YouTube apps</div>
-      </div>
+      </div> -->
       <div class="notifications-icon-container">
         <img class="notifications-icon" src="images/icons/notifications.svg" alt="">
-        <div class="notifications-count">3</div>
+        <div class="notifications-count">9+</div>
         <div class="tooltip">Notifications</div>
       </div>
-      <img class="current-user-picture" src="images/channels/my-channel.jpeg" alt="">
+      <img class="current-user-picture" src="images/channels/my-channel.jpg" alt="">
     </div>
   </header>
 
@@ -54,28 +60,170 @@
       <div>Home</div>
     </div>
     <div class="sidebar-link">
-      <img src="./images/icons/explore.svg" alt="">
-      <div>Explore</div>
+      <img src="./images/icons/shorts.svg" alt="">
+      <div>Shorts</div>
     </div>
     <div class="sidebar-link">
       <img src="./images/icons/subscriptions.svg" alt="">
       <div>Subscriptions</div>
     </div>
-    <div class="sidebar-link">
-      <img src="./images/icons/originals.svg" alt="">
-      <div>Originals</div>
+
+    <div class="user-links">
+      <div class="sidebar-link user-link">
+        <div class="user-link-heading">You</div>
+        <img class="user-link-img" src="./images/icons/greater-than-arrow.png" alt="">
+      </div>
+      <div class="sidebar-link user-link">
+        <img src="./images/icons/your-channel.svg" alt="">
+        <div>Your channel</div>
+      </div>
+      <div class="sidebar-link user-link">
+        <img src="./images/icons/history.svg" alt="">
+        <div>History</div>
+      </div>
+      <div class="sidebar-link user-link">
+        <img src="./images/icons/playlists.svg" alt="">
+        <div>Playlists</div>
+      </div>
+      <div class="sidebar-link user-link">
+        <img src="./images/icons/your-videos.svg" alt="">
+        <div>Your videos</div>
+      </div>
+      <div class="sidebar-link user-link">
+        <img src="./images/icons/watch-later.svg" alt="">
+        <div>Watch later</div>
+      </div>
+      <div class="sidebar-link user-link">
+        <img src="./images/icons/liked-videos.svg" alt="">
+        <div>Liked videos</div>
+      </div>
     </div>
-    <div class="sidebar-link">
-      <img src="./images/icons/youtube-music.svg" alt="">
-      <div>YouTube Music</div>
+
+    <div class="user-subscriptions">
+      <div class="heading">Subscriptions</div>
+      <div class="sidebar-link">
+        <img src="./images/subscriptions/channels-profile-1.jpg" alt="">
+        <div>24 News HD</div>
+        <div class="status"></div>
+      </div>
+      <div class="sidebar-link">
+        <img src="./images/subscriptions/channels-profile-3.jpg" alt="">
+        <div>ARY Digital HD</div>
+        <div class="status"></div>
+      </div>
+      <div class="sidebar-link">
+        <img src="./images/subscriptions/channels-profile-2.jpg" alt="">
+        <div>ARY News</div>
+        <div class="status"></div>
+      </div>
+      <div class="sidebar-link">
+        <img src="./images/subscriptions/channels-profile-4.jpg" alt="">
+        <div>BOL News</div>
+        <div class="status"></div>
+      </div>
+      <div class="sidebar-link">
+        <img src="./images/subscriptions/channels-profile-5.jpg" alt="">
+        <div>6 Pack Programmer</div>
+        <div class="status"></div>
+      </div>
+      <div class="sidebar-link">
+        <img src="./images/subscriptions/channels-profile-6.jpg" alt="">
+        <div>Academind</div>
+        <div class="status"></div>
+      </div>
+      <div class="sidebar-link">
+        <img src="./images/channels/my-channel.jpeg" alt="">
+        <div>SuperSimpleDev</div>
+        <div class="status"></div>
+      </div>
     </div>
-    <div class="sidebar-link">
-      <img src="./images/icons/library.svg" alt="">
-      <div>Library</div>
+
+    <div class="explore-links">
+      <div class="heading">Explore</div>
+      <div class="sidebar-link">
+        <img src="./images/icons/trending.svg" alt="">
+        <div>Trending</div>
+      </div>
+      <div class="sidebar-link">
+        <img src="./images/icons/music.svg" alt="">
+        <div>Music</div>
+      </div>
+      <div class="sidebar-link">
+        <img src="./images/icons/gaming.svg" alt="">
+        <div>Gaming</div>
+      </div>
+      <div class="sidebar-link">
+        <img src="./images/icons/news.svg" alt="">
+        <div>News</div>
+      </div>
+      <div class="sidebar-link">
+        <img src="./images/icons/sports.svg" alt="">
+        <div>Sports</div>
+      </div>
+    </div>
+
+    <div class="more-from-youtube-links">
+      <div class="heading">More from YouTube</div>
+      <div class="sidebar-link">
+        <img src="./images/icons/youtube-premium.svg" alt="">
+        <div>YouTube Premium</div>
+      </div>
+      <div class="sidebar-link">
+        <img src="./images/icons/youtube-studio.svg" alt="">
+        <div>YouTube Studio</div>
+      </div>
+      <div class="sidebar-link">
+        <img src="./images/icons/youtube-music.svg" alt="">
+        <div>YouTube Music</div>
+      </div>
+      <div class="sidebar-link">
+        <img src="./images/icons/youtube-kids.svg" alt="">
+        <div>YouTube Kids</div>
+      </div>
+    </div>
+
+    <div class="setting-links">
+      <div class="sidebar-link">
+        <img src="./images/icons/settings.svg" alt="">
+        <div>Settings</div>
+      </div>
+      <div class="sidebar-link">
+        <img src="./images/icons/report-history.svg" alt="">
+        <div>Report history</div>
+      </div>
+      <div class="sidebar-link">
+        <img src="./images/icons/help.svg" alt="">
+        <div>Help</div>
+      </div>
+      <div class="sidebar-link">
+        <img src="./images/icons/send-feedback.svg" alt="">
+        <div>Send feedback</div>
+      </div>
     </div>
   </nav>
 
   <main>
+    <section class="filters-slidebar">
+      <div class="filters">
+        <div class="each-filter">All</div>
+        <div class="each-filter">Muhammad Owais Raza Qadri</div>
+        <div class="each-filter">Music</div>
+        <div class="each-filter">Web Development</div>
+        <div class="each-filter">Muhammad Owais Raza Qadri</div>
+        <div class="each-filter">Music</div>
+        <div class="each-filter">Web Development</div>
+        <div class="each-filter">Muhammad Owais Raza Qadri</div>
+        <div class="each-filter">Music</div>
+        <div class="each-filter">Web Development</div>
+      </div>
+      <div class="forward-button">
+        <div class="white-shade"></div>
+        <div class="forward-icon">
+          <img src="./images/icons/greater-than-arrow.png" alt="">
+        </div>
+      </div>
+    </section>
+
     <section class="video-grid">
       <div class="video-preview">
         <div class="thumbnail-row">
@@ -104,7 +252,7 @@
               <p class="video-title">Talking Tech and AI with Google CEO Sundar Pichai!</p>
             </a>
             <p class="video-author">Marques Brownlee</p>
-            <p class="video-stats">3.4M views &#183; 6 months ago</p>
+            <p class="video-stats">3.4M views &bull; 6 months ago</p>
           </div>
         </div>
       </div>
@@ -136,7 +284,7 @@
               <p class="video-title">Try Not To Laugh Challenge #9</p>
             </a>
             <p class="video-author">Markiplier</p>
-            <p class="video-stats">19M views &#183; 4 years ago</p>
+            <p class="video-stats">19M views &bull; 4 years ago</p>
           </div>
         </div>
       </div>
@@ -168,7 +316,7 @@
               <p class="video-title">Crazy Tik Toks Taken Moments Before DISASTER</p>
             </a>
             <p class="video-author">SSSniperWolf</p>
-            <p class="video-stats">12M views &#183; 1 year ago</p>
+            <p class="video-stats">12M views &bull; 1 year ago</p>
           </div>
         </div>
       </div>
@@ -200,7 +348,7 @@
               <p class="video-title">The Simplest Math Problem No One Can Solve - Collatz Conjecture</p>
             </a>
             <p class="video-author">Veritasium</p>
-            <p class="video-stats">18M views &#183; 4 months ago</p>
+            <p class="video-stats">18M views &bull; 4 months ago</p>
           </div>
         </div>
       </div>
@@ -233,7 +381,7 @@
                 Problem</p>
             </a>
             <p class="video-author">CS Dojo</p>
-            <p class="video-stats">519K views &#183; 5 years ago</p>
+            <p class="video-stats">519K views &bull; 5 years ago</p>
           </div>
         </div>
       </div>
@@ -266,7 +414,7 @@
                 Pay For</p>
             </a>
             <p class="video-author">MrBeast</p>
-            <p class="video-stats">141M views &#183; 1 year ago</p>
+            <p class="video-stats">141M views &bull; 1 year ago</p>
           </div>
         </div>
       </div>
@@ -298,7 +446,7 @@
               <p class="video-title">Why Planes Don't Fly Over Tibet</p>
             </a>
             <p class="video-author">RealLifeLore</p>
-            <p class="video-stats">6.6M views &#183; 1 year ago</p>
+            <p class="video-stats">6.6M views &bull; 1 year ago</p>
           </div>
         </div>
       </div>
@@ -330,7 +478,7 @@
               <p class="video-title">Inside The World's Biggest Passenger Plane</p>
             </a>
             <p class="video-author">Tech Vision</p>
-            <p class="video-stats">3.7M views &#183; 10 months ago</p>
+            <p class="video-stats">3.7M views &bull; 10 months ago</p>
           </div>
         </div>
       </div>
@@ -362,7 +510,7 @@
               <p class="video-title">The SECRET to Super Human STRENGTH</p>
             </a>
             <p class="video-author">ThenX</p>
-            <p class="video-stats">20M views &#183; 3 year ago</p>
+            <p class="video-stats">20M views &bull; 3 year ago</p>
           </div>
         </div>
       </div>
@@ -394,7 +542,7 @@
               <p class="video-title">How The World's Largest Cruise Ship Makes 30,000 Meals Every Day</p>
             </a>
             <p class="video-author">Business Insider</p>
-            <p class="video-stats">14M views &#183; 1 year ago</p>
+            <p class="video-stats">14M views &bull; 1 year ago</p>
           </div>
         </div>
       </div>
@@ -426,7 +574,7 @@
               <p class="video-title">Dubai's Crazy Underwater Train and Other Things #Only in Dubai</p>
             </a>
             <p class="video-author">Destination Tips</p>
-            <p class="video-stats">3M views &#183; 1 year ago</p>
+            <p class="video-stats">3M views &bull; 1 year ago</p>
           </div>
         </div>
       </div>
@@ -458,13 +606,12 @@
               <p class="video-title">What would happen if you didn’t drink water? - Mia Nacamulli</p>
             </a>
             <p class="video-author">TED-Ed</p>
-            <p class="video-stats">12M views &#183; 5 years ago</p>
+            <p class="video-stats">12M views &bull; 5 years ago</p>
           </div>
         </div>
       </div>
     </section>
   </main>
-
 </body>
 
 </html>
