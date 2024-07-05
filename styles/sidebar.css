@@ -18,21 +18,19 @@
   background-color: white;
   width: 210px;
   z-index: 200;
-  padding: 0 10px;
+  padding: 10px;
   overflow-y: hidden;
-  transition: overflow 1s;
+  transition: "overflow-y" 1s;
 }
 
 .sidebar:hover {
   overflow-y: scroll;
 }
 
-.sidebar-link {
+.sidebar-link,
+.user-link {
   height: 40px;
-  padding-left: 14px;
   display: flex;
-  /* flex-direction: column; */
-  /* justify-content: center; */
   align-items: center;
   border-radius: 10px;
   cursor: pointer;
@@ -44,13 +42,17 @@
 
 .sidebar-link img {
   height: 24px;
-  margin-right: 24px;
+  margin: 0 24px 0 14px;
 }
 
 .sidebar-link div {
   font-size: 14px;
-  /* margin-top: 5px; */
 }
+
+.large-browser{
+  display: none;
+}
+
 
 .user-links,
 .user-subscriptions,
@@ -58,21 +60,18 @@
 .more-from-youtube-links,
 .setting-links {
   border-top: 1px solid rgb(220, 220, 220);
-  margin-top: 10px;
-  padding-top: 10px;
-}
-
-.user-link img {
-  height: 20px;
-  width: 20px;
-  object-fit: cover;
-  margin-right: 28px;
+  margin-top: 12px;
+  padding-top: 12px;
 }
 
 .user-link-heading {
-  margin-right: 10px;
+  margin: 0 6px 0 14px;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 500;
+}
+
+.user-link-img {
+  height: 20px;
 }
 
 .heading {
@@ -81,9 +80,10 @@
   font-weight: bold;
 }
 
-.user-subscriptions img{
+.user-subscriptions img {
   border-radius: 12px;
 }
+
 /* 
 @media (min-width: 1216px) {
   .sidebar-link div {
